@@ -54,7 +54,7 @@ resource "azurerm_network_interface" "nic" {
   tags                          = merge(local.tags, try(each.value.tags, null))
 
   ip_configuration {
-    name                          = azurecaf_name.nic[each.key].result
+    name                          = lookup(each.value, "ip_configuration_name", null)
     subnet_id                     = can(each.value.subnet_id) || can(each.value.vnet_key) == false ? try(each.value.subnet_id, var.virtual_subnets[try(each.value.lz_key, var.client_config.landingzone_key)][each.value.subnet_key].id) : var.vnets[try(each.value.lz_key, var.client_config.landingzone_key)][each.value.vnet_key].subnets[each.value.subnet_key].id
     private_ip_address_allocation = lookup(each.value, "private_ip_address_allocation", "Dynamic")
     private_ip_address_version    = lookup(each.value, "private_ip_address_version", null)
