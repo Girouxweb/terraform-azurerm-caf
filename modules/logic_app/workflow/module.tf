@@ -13,7 +13,6 @@ resource "azurerm_logic_app_workflow" "la" {
   name                               = azurecaf_name.la.result
   resource_group_name                = var.resource_group_name
   location                           = var.location
-  integration_service_environment_id = try(var.settings.integration_service_environment_id, null)
   logic_app_integration_account_id   = try(var.settings.logic_app_integration_account_id, null)
   workflow_schema                    = try(var.settings.workflow_schema, null)
   workflow_version                   = try(var.settings.workflow_version, null)
