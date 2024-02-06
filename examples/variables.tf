@@ -733,9 +733,6 @@ variable "data_factory_linked_service_sql_server" {
 variable "data_factory_linked_service_azure_databricks" {
   default = {}
 }
-variable "integration_service_environment" {
-  default = {}
-}
 variable "logic_app_action_http" {
   default = {}
 }
