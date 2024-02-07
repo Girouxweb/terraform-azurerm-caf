@@ -11,7 +11,7 @@ export TF_VAR_level=level1
 export TF_VAR_backend_type=remote
 
 rover \
-  -lz /tf/caf/landingzones/caf_solution \
+  -lz /tf/caf/caf_solution \
   -var-folder /tf/caf/examples/compute/virtual_machine/112-ssh-key \
   -target_subscription xxxxxx \
   -tfstate example.tfstate \

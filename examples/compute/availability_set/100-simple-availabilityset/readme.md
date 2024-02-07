@@ -4,7 +4,7 @@ You can test this module outside of a landingzone using
 configuration_folder=/tf/caf/examples/compute/availability_set/100-simple-availabilityset
 parameter_files=$(find ${configuration_folder} | grep .tfvars | sed 's/.*/-var-file &/' | xargs)
 
-cd /tf/caf/landingzones/caf_example
+cd /tf/caf/caf_example
 
 terraform init
 
@@ -22,7 +22,7 @@ current_folder=$(pwd)
 parameter_files=$(find ${current_folder} | grep .tfvars | sed 's/.*/-var-file &/' | xargs)
 
 rover \
-  -lz /tf/caf/landingzones/caf_example \
+  -lz /tf/caf/caf_example \
   ${parameter_files} \
   -level level1 \
   -a plan

@@ -4,7 +4,7 @@ You can test this module outside of a landingzone using
 configuration_folder=/tf/caf/examples/compute/virtual_machine/210-vm-bastion-winrm
 parameter_files=$(find ${configuration_folder} | grep .tfvars | sed 's/.*/-var-file &/' | xargs)
 
-cd /tf/caf/landingzones/caf_example
+cd /tf/caf/caf_example
 
 terraform init
 
@@ -21,7 +21,7 @@ Rover deployment in landingzones
 configuration_folder=/tf/caf/examples/compute/virtual_machine/210-vm-bastion-winrm
 parameter_files=$(find ${configuration_folder} | grep .tfvars | sed 's/.*/-var-file &/' | xargs)
 
-rover -lz /tf/caf/landingzones/caf_example \
+rover -lz /tf/caf/caf_example \
   ${parameter_files} \
   -tfstate 210-vm-bastion-winrm.tfstate\
   -level level1 \

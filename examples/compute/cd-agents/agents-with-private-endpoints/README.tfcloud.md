@@ -76,7 +76,7 @@ export TF_CLOUD_WORKSPACE_ATTRIBUTES_ASSESSMENTS_ENABLED=true
 export ROVER_RUNNER=true
 
 rover \
-  -lz /tf/caf/landingzones/caf_solution \
+  -lz /tf/caf/caf_solution \
   -var-folder /tf/caf/configuration/level0/tfcloud/bootstrap-with-private-endpoints \
   -tfstate_subscription_id $ARM_SUBSCRIPTION_ID \
   -target_subscription $ARM_SUBSCRIPTION_ID \

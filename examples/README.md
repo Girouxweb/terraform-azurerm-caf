@@ -68,16 +68,16 @@ rover login --tenant <tenant_name>.onmicrosoft.com -s <subscription_id>
 ### 2. Deploy the basic launchpad
 
 ```bash
-rover -lz /tf/caf/landingzones/caf_launchpad \
+rover -lz /tf/caf/caf_launchpad \
 -launchpad \
--var-folder /tf/caf/landingzones/caf_launchpad/scenario/100 \
+-var-folder /tf/caf/caf_launchpad/scenario/100 \
 -a apply
 ```
 
 ### 3. Test your example
 
 ```bash
-rover -lz /tf/caf/landingzones/caf_example \
+rover -lz /tf/caf/caf_example \
 -var-folder /tf/caf/examples/<path of the example> \
 -a plan|apply
 ```
