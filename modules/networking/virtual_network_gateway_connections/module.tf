@@ -50,5 +50,9 @@ resource "azurerm_virtual_network_gateway_connection" "vngw_connection" {
     delete = "60m"
   }
 
+  lifecycle {
+    ignore_changes = [shared_key]
+  }
+
 
 }
