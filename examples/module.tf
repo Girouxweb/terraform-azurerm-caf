@@ -56,7 +56,6 @@ module "example" {
   #   azureDatalakeAnalyticsCatalogAndJobEndpoint = var.azureDatalakeAnalyticsCatalogAndJobEndpoint
   #   azureDatalakeStoreFileSystemEndpoint        = var.azureDatalakeStoreFileSystemEndpoint
   #   keyvaultDns                                 = var.keyvaultDns
-  #   mariadbServerEndpoint                       = var.mariadbServerEndpoint
   #   mhsmDns                                     = var.mhsmDns
   #   mysqlServerEndpoint                         = var.mysqlServerEndpoint
   #   postgresqlServerEndpoint                    = var.postgresqlServerEndpoint
@@ -143,8 +142,6 @@ module "example" {
     databricks_workspaces              = var.databricks_workspaces
     databricks_access_connectors       = var.databricks_access_connectors
     machine_learning_workspaces        = var.machine_learning_workspaces
-    mariadb_servers                    = var.mariadb_servers
-    mariadb_databases                  = var.mariadb_databases
     mssql_databases                    = var.mssql_databases
     mssql_elastic_pools                = var.mssql_elastic_pools
     mssql_failover_groups              = var.mssql_failover_groups

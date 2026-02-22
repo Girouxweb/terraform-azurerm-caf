@@ -25,7 +25,6 @@ variable "cloud" {
     azureDatalakeAnalyticsCatalogAndJobEndpoint = "azuredatalakeanalytics.net"
     azureDatalakeStoreFileSystemEndpoint        = "azuredatalakestore.net"
     keyvaultDns                                 = ".vault.azure.net"
-    mariadbServerEndpoint                       = ".mariadb.database.azure.com"
     mhsmDns                                     = ".managedhsm.azure.net"
     mysqlServerEndpoint                         = ".mysql.database.azure.com"
     postgresqlServerEndpoint                    = ".postgres.database.azure.com"
